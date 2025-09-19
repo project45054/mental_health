@@ -28,7 +28,11 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-
+    // ✅ Store Refresh Token (for hybrid auth)
+    refreshToken: {
+      type: String,
+      default: null,
+    },
     // ✅ Favorites (just store media IDs)
     favorites: [
       {
